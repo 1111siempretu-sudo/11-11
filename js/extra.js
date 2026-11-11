@@ -137,7 +137,7 @@
 /* ===== Botón de mensaje: una sola vez, a un contacto específico (WhatsApp) ===== */
 (() => {
   const btn = document.getElementById('msgBtn'); if (!btn) return;
-  const NUMERO = '573028731717'; // 57 (Colombia) + 3028731717
+  const NUMERO = '573028232007'; // 57 (Colombia) + 3028731717
   const MENSAJE = 'Mi amor, acabo de llegar al final de nuestra página 💕 Gracias por este primer año a tu lado, por cada risa, cada abrazo y cada día. Te amo hoy, mañana y por siempre. Por siempre tú 💕';
   const KEY = 'mensaje-enviado-v1', txt = document.getElementById('msgTxt'), note = document.getElementById('msgNote');
   const yaEnviado = () => { try { return localStorage.getItem(KEY) === '1'; } catch (e) { return false; } };
