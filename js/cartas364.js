@@ -1,0 +1,37 @@
+/* 364 cartas: 8 clásicas + 356 generadas (52 situaciones x 7 voces) */
+(() => {
+  const D = window.NOSOTROS;
+  const S = [
+    ['tengas un día pesado','Hoy el mundo pesa más de lo normal, & aun así tú sigues de pie.'],['te sientas cansada','Descansar no es rendirse, mi amor; es recargar tu luz.'],['no puedas dormir','Ya es tarde & tu mente no se apaga: déjame cuidarte la noche.'],['te veas al espejo','Mírate bien: esa persona del espejo es de quien me enamoré.'],
+    ['estés triste','Si hoy se te nubló el corazón, me quedo a tu lado hasta que aclare.'],['estés feliz','Qué bonito verte feliz: se me contagia hasta el alma.'],['logres algo grande','Lo lograste, & no podría estar más orgulloso de ti.'],['te falle algo','Equivocarse también es avanzar; tú eres más que cualquier tropiezo.'],
+    ['tengas frío','Imagina que te abrazo tan fuerte que el frío se rinde.'],['tengas antojo de mí','Hoy tengo antojo de tu risa, de tu abrazo & de ti entera.'],['necesites un abrazo','Aquí va uno largo, de esos que apagan el ruido de afuera.'],['llegues a casa','Bienvenida a tu lugar seguro; yo también vivo ahí.'],
+    ['empieces la semana','Un lunes con tu nombre en mi cabeza sabe distinto: sabe a comienzo.'],['termine la semana','Llegó el viernes & lo único que quiero planear es el sábado contigo.'],['tengas un mal recuerdo','Lo que dolió ya pasó; lo que viene lo escribimos nosotros.'],['quieras reír','Ven, que tengo guardados todos nuestros chistes malos para ti.'],
+    ['te sientas insegura','Si supieras lo que yo veo en ti, no volverías a dudar.'],['cumplas un año más','Cada año tuyo es un regalo que me tocó abrir a tu lado.'],['extrañes un lugar','A veces el hogar es una persona; ojalá yo sea el tuyo.'],['te enojes conmigo','Si estás enojada, respira: te escucho, te entiendo & te quiero igual.'],
+    ['quieras recordarnos','Abre la galería & mira todo lo que ya hemos vivido.'],['llueva fuerte','Que llueva: yo traigo el paraguas & la excusa para abrazarte.'],['salga el sol','Hoy sale el sol & me acordé de cómo brillas tú.'],['hagamos un plan','Tengo mil ideas de planes & en todas apareces tú.'],
+    ['vayas de viaje','Donde vayas, llévame en el bolsillo del corazón.'],['no nos veamos','Los días sin verte son largos, pero cada uno me acerca a abrazarte.'],['te sientas sola','Nunca estás sola: mi pensamiento siempre te va buscando.'],['quieras oír la verdad','La verdad es simple: te elijo, hoy & todos los días.'],
+    ['te duela algo','Ojalá pudiera quitarte el dolor; mientras tanto te mando mis cuidados.'],['estés nerviosa','Los nervios son señal de que te importa, & tú puedes con todo.'],['cocinemos juntos','En mi cocina favorita tú eres la receta secreta.'],['escuches nuestra canción','Suena nuestra canción & de golpe estamos juntos otra vez.'],
+    ['duermas lejos de mí','Que la luna te cuente que pienso en ti.'],['quieras reírte de nosotros','Somos un par de locos, & así nos queremos.'],['estés bajo presión','No tienes que poder con todo hoy; solo con el siguiente paso.'],['necesites paciencia','Contigo la espera vale la pena, siempre.'],
+    ['hayas tenido un mal día','Bajemos el telón de hoy; mañana el guion lo escribimos mejor.'],['sientas que no avanzas','Mira cuánto has crecido: yo he sido testigo de cada paso.'],['quieras un beso','Imagínalo: lento, suave, de esos que paran el tiempo.'],['nos peleemos por tonterías','Prefiero mil reconciliaciones contigo que una paz sin ti.'],
+    ['dudes del futuro','No sé qué viene, pero quiero que sea a tu lado.'],['se acabe el mes','Otro mes más contigo & siento que apenas empezamos.'],['te sientas fuerte','Esa fuerza tuya me deja sin palabras; eres imparable.'],['quieras soñar despierta','Sueña en grande: yo cargo las maletas del sueño.'],
+    ['necesites sentirte querida','Te quiero a ti, completa, con tus días buenos & tus días de tormenta.'],['quieras agradecerme algo','No hay nada que agradecer: contigo todo es regalo.'],['algo huela a casa','Hay olores que me llevan hasta ti sin permiso.'],['te rías sin parar','Tu risa es mi canción favorita; no la apagues nunca.'],
+    ['mires las estrellas','Esas mismas estrellas nos alumbran aunque estemos lejos.'],['algo salga mal','Si el plan falla, inventamos otro, juntos & riéndonos.'],['necesites un empujón','Vamos, tú puedes; yo te aplaudo desde la primera fila.'],['sea nuestro aniversario','Un año & sigo eligiéndote como el primer día.']
+  ];
+  const V = [
+    ['Promesa','Te prometo estar aquí cuando más lo necesites.','Te prometo escucharte aunque no digas nada.','Te prometo que el próximo plan lo elijo pensando en ti.','Te prometo abrazos de sobra & cero prisa.','Te prometo seguir aprendiéndote cada día.','Te prometo cuidar lo nuestro como lo más valioso.'],
+    ['Recuerdo','Me acuerdo de la primera vez que nos reímos sin parar.','Me acuerdo de cómo se sintió nuestro primer abrazo largo.','Me acuerdo de tu cara cuando te sorprendí sin avisar.','Me acuerdo de esas tardes donde el tiempo no corría.','Me acuerdo de lo nerviosos que estábamos al empezar.','Me acuerdo de todo, porque contigo hasta lo pequeño se queda.'],
+    ['Plan','Quiero que un día de estos nos escapemos sin rumbo.','Pensé en un plan: pizza, manta & películas contigo.','Quiero llevarte a un lugar donde solo existamos tú & yo.','Imagino un domingo largo, sin reloj, a tu lado.','Algún día quiero despertar sabiendo que el plan eres tú.','Hagamos una lista de sueños & tachemos uno por mes.'],
+    ['Broma','& sí, sé que roncas bonito, pero igual te amo.','Te quiero aunque me robes las cobijas.','Eres mi persona favorita & mi mejor excusa para comer helado.','Prometo no contar tus bailes secretos, solo aplaudirlos.','Tengo una queja: me tienes demasiado enamorado.','Ya llevas el récord de cosas lindas que me haces sentir.'],
+    ['Gratitud','Gracias por quedarte, incluso en los días complicados.','Gracias por hacerme mejor sin pedírmelo.','Gracias por tu paciencia con mis defectos.','Gracias por cada risa que me regalas sin darte cuenta.','Gracias por ser mi calma cuando todo corre.','Gracias por tu forma única de quererme.'],
+    ['Deseo','Deseo que nunca te falte alegría.','Deseo que cada sueño tuyo encuentre su camino.','Deseo que veas en ti lo que yo veo cada día.','Deseo que el mundo te trate tan bonito como mereces.','Deseo que tus mañanas sean suaves & tus noches tranquilas.','Deseo que sigamos creciendo juntos, de la mano.'],
+    ['Susurro','Ven más cerca, que esto solo es para ti.','Shh… esto es un secreto entre tú & yo.','Te lo digo bajito, para que el viento no lo escuche.','Te lo digo despacio: eres mi lugar favorito.','Cierra los ojos & escucha lo que dice mi corazón.','Entre tú & yo, nadie más entiende esto.']
+  ];
+  const C = ['Te amo, hoy & siempre.','Eres mi mejor casualidad.','Aquí estaré, pase lo que pase.','Gracias por existir, mi vida.','Siempre tuyo.','Con cariño infinito, para ti.','Un beso largo, hasta que nos veamos.'];
+  const F = ['Con todo mi amor','Tu persona favorita','Quien más te quiere','Tuyo siempre','Tu compañero de vida','Con el corazón en la mano','Tu fan número uno'];
+  D.vocesCartas = ['Clásicas', ...V.map(v => v[0])];
+  D.cartas.forEach(c => c.voz = 0);
+  outer: for (let v = 0; v < 7; v++) for (let s = 0; s < S.length; s++) {
+    if (D.cartas.length >= 364) break outer;
+    D.cartas.push({ voz: v + 1, titulo: `Para cuando ${S[s][0]}`, texto: [S[s][1], V[v][1 + s % 6], C[(s * 3 + v) % 7]], firma: F[(s + v * 2) % 7] });
+  }
+  D.cartas.forEach((c, i) => c.n = i + 1);
+})();
